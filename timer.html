@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="senter">
+<!-- WIDGET (cek harga nxpc dari CMC)-->
+		<div class="main-container">
+			<div class="cooldown-bar-container">
+				<div id="widget-auto-bar" class="cooldown-bar"></div>
+			</div>
+
+			<div class="contwidget">
+				<div id="crypto-widget-container" class="widget">Cooldown sek...!</div>
+			</div>
+
+			<button id="btn-refresh-crypto" class="btn-refresh-crypto">Kuchiyose No Jutsu</button>
+		</div>
+<!-- /WIDGET -->
+
+<!-- TIMER (persiapan bertani nesolet)-->
+		<div class="main-container">
+			<audio id="alarmAudio" src="alarm.mp3" loop></audio>
+			<div id="session-counter" class="session-badge">Siap tempur...?</div>
+			
+			<div class ="con-waktu">
+				<div class="input-timer">
+					<span>⏳</span>
+					<input id="timercd" class="input-alarm" value=120></input>
+				</div>
+				
+				<div>
+					<div id="countdown" class="timer"></div>
+					<span id="play-time" class="play-time">00:00:00</span>
+				</div>
+
+				<div class="input-timer">
+					<span>🔔</span>
+					<input id="alarmcd" class="input-alarm" value=15></input>
+				</div>
+			</div>
+			
+			<div class="cont-volume" id="aturVolume">
+				<div class="controls1">
+					<span class="label-reward">🔈</span>
+					<input type="range" id="volumeSlider" min="0" max="1" step="0.10" value="0.60" class="slider-volume">
+					<span class="label-reward">🔊</span>
+				</div>
+
+				<div class="slider-labels">
+					<span>|</span>
+					<span>|</span>
+					<span>|</span>
+					<span>|</span>
+					<span>|</span>
+					<span>|</span>
+					<span>|</span>
+					<span>|</span>
+					<span>|</span>
+					<span>|</span>
+					<span>|</span>
+				</div>
+			</div>
+
+			<div class="controls1">
+				<button id="btn-toggle" class="btn-play">Sikat..!!</button>
+				<span id="volumeIndikator" class="volume-indikator">00</span>
+				<button id="btn-clear-history" class="btn-stop">Reset</button>
+			</div>
+
+			<div class="con-working-time">
+				<div>Kerja Lembur Bagai Kuda : <span id="working-time" class="active-time">00:00:00</span></div>
+			</div>
+
+		</div>
+<!-- /TIMER -->
+
+<!-- REWARD CHARGE (alarm isi ulang reward field dikala nesolet tiris sampai 0)-->
+		<div class="main-container">
+			<div class="rewardcd">
+				<div class="controls">
+					<div class="cooldown-bar-container">
+						<div id="reward-charge-bar" class="cooldown-bar"></div>
+					</div>
+					<div id="reward-charge" class="label-reward"></div>
+					<button id="btn-reward" class="button-reward">🔊</button>
+				</div>
+				<button id="btn-reward1" class="button-reward">🔄 Reward Cooldown 🔄</button>
+			</div>
+		</div>
+<!-- /REWARD CHARGE -->
+	</div>
+
+<!-- Menghubungkan file logika JavaScript -->
+<script src="timerscript.js"></script>
+
+</body>
+</html>
